@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="logo.jpeg" alt="Logo" width="40" height="40"> <!-- Replace with your logo -->
+      </a>
+
+      <!-- Toggle button for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Middle Navigation -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="#">Service 1</a></li>
+              <li><a class="dropdown-item" href="#">Service 2</a></li>
+              <li><a class="dropdown-item" href="#">Service 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Our Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Side "Get Started" Button -->
+      <div class="d-flex">
+        <a href="#" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+ <!-- Slider Hero Section -->
+    <div id="heroSlider" class="carousel slide hero-slider" data-bs-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#heroSlider" data-bs-slide-to="1"></li>
+        <li data-bs-target="#heroSlider" data-bs-slide-to="2"></li>
+      </ol>
+  
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url('4.jpeg');"> <!-- Replace with your image -->
+          <div class="carousel-caption text-center">
+            <h1>Welcome to Our Website 'Learnlink'</h1>
+            <p>We offer the best solution of the campus</p>
+            <a href="#" class="btn btn-light">Read More</a>
+          </div>
+        </div>
+  
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url('2.jpg');"> <!-- Replace with your image -->
+          <div class="carousel-caption text-center">
+            <h1>Interact with seniors</h1>
+            <p>Get in touch with seniors to know about college club,affairs and any many other things.You can even borrow books.</p>
+            <a href="#" class="btn btn-light">Read More</a>
+          </div>
+        </div>
+  
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url('3.jpg.webp');"> <!-- Replace with your image -->
+          <div class="carousel-caption text-center">
+            <h1>Interact with faculty.</h1>
+            <p>Faculty are dedicated to help you through-out your academic journey 24/7. .</p>
+            <a href="#" class="btn btn-light">Read More</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Left and Right Controls -->
+      <a class="carousel-control-prev" href="#heroSlider" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#heroSlider" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+
+
+ <!-- About Us Section -->
+ <section class="about-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left side: Tabs and text -->
+      <div class="col-md-6">
+        <h2 class="section-title">About Us</h2>
+        <!-- Tabs Navigation -->
+        <ul class="nav nav-tabs" id="aboutTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="company-tab" data-bs-toggle="tab" data-bs-target="#mission" type="button" role="tab" aria-controls="mission" aria-selected="true">our Misson</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="vision-tab" data-bs-toggle="tab" data-bs-target="#vision" type="button" role="tab" aria-controls="vision" aria-selected="false">Our Vision</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="future-tab" data-bs-toggle="tab" data-bs-target="#future" type="button" role="tab" aria-controls="future" aria-selected="false">Our Future</button>
+          </li>
+        </ul>
+
+        <!-- Tabs Content -->
+        <div class="tab-content" id="aboutTabsContent">
+          <!-- Our Company Tab -->
+          <div class="tab-pane fade show active" id="mission" role="tabpanel" aria-labelledby="mission-tab">
+            <h3>Our Mission</h3>
+            <p>Students often faces difficulty in interacting with senior and faculty,leading confussion among juniors.</p>
+            <a href="#" class="btn btn-primary btn-learn-more">Learn More</a>
+          </div>
+
+          <!-- Our Mission Tab -->
+          <div class="tab-pane fade" id="vision" role="tabpanel" aria-labelledby="vivion-tab">
+            <h3>Our Vision</h3>
+            <p>Our mission is to provide user friendly plateform.Our website provide instant messaging between students and teachers.It will gives organized chats based on course and subject.Study material can easy to upload and downnload</p>
+            <a href="#" class="btn btn-primary btn-learn-more">Learn More</a>
+          </div>
+
+          <!-- Our Vision Tab -->
+          <div class="tab-pane fade" id="future" role="tabpanel" aria-labelledby="future-tab">
+            <h3>Our Future</h3>
+            <p>We envision a future where businesses can seamlessly operate, innovate, and achieve their full potential through our expertise and technology.</p>
+            <a href="#" class="btn btn-primary btn-learn-more">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side: Image -->
+      <div class="col-md-6">
+        <img src="iStock_000037379776_Medium.160328.jpg" alt="About Us Image" class="about-image"> <!-- Replace with your image -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Our Services Section -->
+<section class="services-section">
+  <div class="container">
+    <!-- Section Heading -->
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-description">
+      We offer a wide range of services to help your business grow and thrive. Explore our services and find the solutions that are right for your company.
+    </p>
+
+    <div class="row">
+      <!-- Service 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="bi bi-gear"></i> <!-- Bootstrap Icons: Replace with your desired icon -->
+          </div>
+          <h4>Study consultancy</h4>
+          <p>We provide innovative and customized solutions to meet your business needs.</p>
+          <a href="#" class="btn-read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="bi bi-briefcase"></i>
+          </div>
+          <h4>Book exchange</h4>
+          <p>Our experts are committed to delivering excellence in every project we handle.</p>
+          <a href="#" class="btn-read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="bi bi-globe"></i>
+          </div>
+          <h4>Note exchange</h4>
+          <p>Our global reach ensures your business gets the best exposure and growth.</p>
+          <a href="#" class="btn-read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Service 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="bi bi-bar-chart"></i>
+          </div>
+          <h4>Group discussion</h4>
+          <p>We offer detailed analytics to help you make informed decisions for your business.</p>
+          <a href="#" class="btn-read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="bi bi-people"></i>
+          </div>
+          <h4>Academic guidance</h4>
+          <p>Our team of experts is dedicated to providing top-notch services to all our clients.</p>
+          <a href="#" class="btn-read-more">Read More</a>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="service-box">
+          <div class="service-icon">
+            <i class="bi bi-laptop"></i>
+          </div>
+          <h4>Real-time discussion</h4>
+          <p>We deliver technology solutions that are tailored to fit your business needs.</p>
+          <a href="#" class="btn-read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+   <!-- Our Projects Section -->
+   <section class="projects-section">
+    <div class="container">
+      <!-- Section Heading -->
+      <h2 class="section-title">Our Projects</h2>
+
+      <!-- Tabs for Project Categories -->
+      <div class="projects-tabs">
+        <ul class="nav nav-tabs justify-content-center" id="projectTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="app-tab" data-bs-toggle="tab" data-bs-target="#app" type="button" role="tab" aria-controls="app" aria-selected="false">App</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="branding-tab" data-bs-toggle="tab" data-bs-target="#branding" type="button" role="tab" aria-controls="branding" aria-selected="false">Product Branding</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="books-tab" data-bs-toggle="tab" data-bs-target="#books" type="button" role="tab" aria-controls="books" aria-selected="false">Books</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tab Content (Project Items) -->
+      <div class="tab-content" id="projectTabsContent">
+        <!-- All Projects Tab -->
+        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+          <div class="row">
+            <!-- Row 1 -->
+            <div class="col-md-4 custom-position-1">
+              <div class="project-item">
+                <img src="app.jpg.webp" alt="Project 1"> <!-- Replace with your image -->
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h4>Project 1</h4>
+                    <p>App Development</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 custom-position-2">
+              <div class="project-item">
+                <img src="books.png.webp" alt="Project 2"> <!-- Replace with your image -->
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h4>Project 2</h4>
+                    <p>Product Branding</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 custom-position-3">
+              <div class="project-item">
+                <img src="books.png.webp" alt="Project 3"> <!-- Replace with your image -->
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h4>Project 3</h4>
+                    <p>Books Design</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="row">
+            <div class="col-md-4 custom-position-3">
+              <div class="project-item">
+                <img src="app.jpg.webp" alt="Project 4"> <!-- Replace with your image -->
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h4>Project 4</h4>
+                    <p>App Development</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 custom-position-2">
+              <div class="project-item">
+                <img src="books.png.webp" alt="Project 5"> <!-- Replace with your image -->
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h4>Project 5</h4>
+                    <p>Product Branding</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 custom-position-1">
+              <div class="project-item">
+                <img src="books.png.webp" alt="Project 6"> <!-- Replace with your image -->
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h4>Project 6</h4>
+                    <p>Books Design</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- App Projects Tab -->
+        <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
+          <!-- App projects go here (add similar structure as in the All tab) -->
+        </div>
+
+        <!-- Product Branding Projects Tab -->
+        <div class="tab-pane fade" id="branding" role="tabpanel" aria-labelledby="branding-tab">
+          <!-- Product Branding projects go here -->
+        </div>
+
+        <!-- Books Projects Tab -->
+        <div class="tab-pane fade" id="books" role="tabpanel" aria-labelledby="books-tab">
+          <!-- Books projects go here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- Contact Us Section -->
+<section class="contact-section">
+  <div class="container">
+    <!-- Section Title -->
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <div class="contact-form">
+          <h4>Send Us a Message</h4>
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Subject" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Info or Map -->
+      <div class="col-md-6">
+        <div class="contact-info">
+          <h4>Our Location</h4>
+          <p><i class="bi bi-geo-alt-fill info-icon"></i> Indraprastha Engineering College, sahibabad industrial area,Ghaziabad, UP</p>
+          <p><i class="bi bi-telephone-fill info-icon"></i> +91 8808745596</p>
+          <p><i class="bi bi-envelope-fill info-icon"></i> adnanonefour@gmail.com</p>
+
+          <!-- Google Map -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093067!2d144.95373531531588!3d-37.81627974205773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43fb2fb5a7%3A0xb2a0e235a5f1c3a9!2sGoogle!5e0!3m2!1sen!2s!4v1632505675749!5m2!1sen!2s" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Company Information -->
+      <div class="col-md-4">
+        <h5>About Us</h5>
+        <p>We are a leading company in providing top-notch services and products to our valued customers. Our goal is to ensure the best service experience and high-quality products tailored to your needs.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="col-md-3">
+        <h5>Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill"></i> Indraprastha engineering college,Sahibabad industrial are,Ghaziabad,UP<India</p>
+        <p><i class="bi bi-telephone-fill"></i> +91 8808745596</p>
+        <p><i class="bi bi-envelope-fill"></i> adnanonefour@gmail.com</p>
+      </div>
+
+      <!-- Newsletter Subscription -->
+      <div class="col-md-3">
+        <h5>Newsletter</h5>
+        <form action="#">
+          <input type="email" class="form-control" placeholder="Your email" required>
+          <button type="submit" class="btn btn-subscribe w-100">Subscribe</button>
+        </form>
+
+        <!-- Social Icons -->
+        <div class="social-icons mt-4">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom mt-4">
+      <p class="mb-0">&copy; 2024 Company Name. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+  
+    <!-- Bootstrap JS and Popper.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  </body>
+  </html>
+   <script src="script.js"></script>
+
+  <!-- Bootstrap JS and Popper.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
